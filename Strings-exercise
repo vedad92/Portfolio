@@ -1,6 +1,7 @@
+#String manipulations
+
 player_1 = 'Ruud Gullit'
 player_2 = 'Marco van Basten'
-
 
 goal_0 = 32
 goal_1 = 54
@@ -29,3 +30,38 @@ print(chant)
 
 good_chant = chant[-1] != " "
 print(good_chant)
+
+#List manipulations
+
+def alphabetical_order(film_names):
+    film_names.sort()
+    return film_names
+
+film_list = ['filmc','filmf','filmd','filmb','filma']
+print(alphabetical_order(film_list))
+
+def won_golden_globe(film_name):
+    winner_list = ['Jaws', 'Star Wars', 'ET', 'Geisha']
+    film_name_input = True if film_name in winner_list else False
+    return film_name_input
+print(won_golden_globe('Fightclub'))
+
+def remove_toto_albums(mixed_collection):
+    tidy_list = []
+    if 'Old Is New' in mixed_collection:
+        mixed_collection.remove('Old Is New')
+        tidy_list.append('Old Is New')
+    if 'Toto XX' in mixed_collection:
+        mixed_collection.remove('Toto XX')
+        tidy_list.append('Toto XX')
+    mixed_collection.sort
+    return print(tidy_list)
+
+#def remove_toto_albums(mixed_collection):
+  #  tidy_list = []
+  #  mixed_collection.remove("Old Is New") 
+  #  tidy_list.append('Old Is New')
+  #  return print(tidy_list)
+
+father_list = ["Because They're Young", "Checkmate", "Fahrenheit", "Old Is New", "Toto XX"]
+remove_toto_albums(father_list)
