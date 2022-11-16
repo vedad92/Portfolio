@@ -1,4 +1,4 @@
-#String manipulations
+                                                                    #STRING MANIPULATIONS
 
 player_1 = 'Ruud Gullit'
 player_2 = 'Marco van Basten'
@@ -31,7 +31,7 @@ print(chant)
 good_chant = chant[-1] != " "
 print(good_chant)
 
-#List manipulations
+                                                                    #LIST MANIPULATIONS
 
 def alphabetical_order(film_names):
     film_names.sort()
@@ -66,7 +66,10 @@ def remove_toto_albums(mixed_collection):
 father_list = ["Because They're Young", "Checkmate", "Fahrenheit", "Old Is New", "Toto XX"]
 remove_toto_albums(father_list)
 
-#Casting
+
+
+
+                                                                    #CASTING
 leek_price = 2
 print(f'Leek is {str(leek_price)} euro per kilo.')
 
@@ -80,7 +83,10 @@ broccoli_order = 'Broccoli 1.6'
 total_price = round(float(broccoli_order[broccoli_order.find(" "):]) * broccoli_price,2)
 print((broccoli_order[broccoli_order.find(" "):][1:]) + 'kg' + " " + 'broccoli' + ' ' + 'costs' + ' ' + str(total_price) + 'e')
 
-#Conditions
+                                                                
+    
+    
+                                                                    #CONDITIONS
 
 def farm_action(weather, time_of_day, milking_status, cow_location, season, tank_status, grass_status):
     if cow_location == 'pasture' and weather == 'rainy':
