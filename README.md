@@ -1,4 +1,4 @@
 # Portfolio
 
-Projectopdrachten en oefeningen WINC academy HBO Back-end development
+Projects and exercices WINC academy Back-end development
 - 
