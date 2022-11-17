@@ -19,7 +19,7 @@ player = 'Frank Rijkaard'
 first_name = player[:player.find(" ")]
 print(first_name)
 last_name_len = len(player[player.find('R'):]) #--> lengte 8
-#last_name_len = len(player[player.find(" "):]) --> waarom is de lengte 9 hier? 
+#last_name_len = len(player[player.find(" "):]) 
 print(last_name_len)
 
 name_short = f'{player[0]}.{player[player.find(" "):]}'
