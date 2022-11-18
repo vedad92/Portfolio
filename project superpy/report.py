@@ -112,7 +112,7 @@ def bought_today_total():
     content = read_csv_to_list('temp_bought.csv')
     for list in content:
         new_list = [float(i) for i in list]
-    console.print('Total bought on {}: €{:.2f}'.format(
+        print('Total bought on {}: €{:.2f}'.format(
         get_date_as_string(True),
         sum(new_list)), style='success')
     return '{:.2f}'.format(sum(new_list))
