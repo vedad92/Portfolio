@@ -19,9 +19,6 @@ __winc_id__ = "a2bc36ea784242e4989deb157d527ba0"
 __human_name__ = "superpy"
 
 
-# Your code below this line.
-
-
 # gevonden op stackoverflow om spatie van een lege metavar weg te halen
 class SingleMetavarHelpFormatter(argparse.HelpFormatter):
     def _format_action_invocation(self, action):
@@ -40,7 +37,7 @@ class SingleMetavarHelpFormatter(argparse.HelpFormatter):
             return ', '.join(parts)
 
 
-# dictonairy van functions zoals in de les van Sebastiaan van Driessel
+# dictonairy van functions zoals in de les uitgelegd
 func_dict = {
     'buy': buy,
     'sell': sell,
@@ -94,13 +91,13 @@ args = my_parser.parse_args()
 # hier call ik al mijn functies
 if args.function == 'buy':
     if args.product_name is None:
-        console.print("required product name", style="error")
+        print("required product name", style="error")
         exit()
     elif args.buy_price is None:
-        console.print('required product price', style="error")
+        print('required product price', style="error")
         exit()
     elif args.exp_date is None:
-        console.print('required expiration date', style='error')
+        print('required expiration date', style='error')
         exit()
     else:
         func_dict[args.function](
@@ -108,10 +105,10 @@ if args.function == 'buy':
 
 elif args.function == 'sell':
     if args.product_name is None:
-        console.print('required product name', style="error")
+        print('required product name', style="error")
         exit()
     elif args.sell_price is None:
-        console.print('required product price', style="error")
+        print('required product price', style="error")
         exit()
     func_dict[args.function](
         args.product_name, args.sell_price)
@@ -127,28 +124,28 @@ elif args.function == 'profit_today':
 
 elif args.function == 'bought_in_month':
     if len(args.year_month) != 7:
-        console.print('use format YYYY-MM', style="error")
+        print('use format YYYY-MM', style="error")
         exit()
     elif args.year_month[4] != '-':
-        console.print('use format YYYY-MM', style="error")
+        print('use format YYYY-MM', style="error")
         exit()
     func_dict[args.function](args.year_month)
 
 elif args.function == 'sold_in_month':
     if len(args.year_month) != 7:
-        console.print('use format YYYY-MM', style="error")
+        print('use format YYYY-MM', style="error")
         exit()
     elif args.year_month[4] != '-':
-        console.print('use format YYYY-MM', style="error")
+        print('use format YYYY-MM', style="error")
         exit()
     func_dict[args.function](args.year_month)
 
 elif args.function == 'profit_in_month':
     if len(args.year_month) != 7:
-        console.print('use format YYYY-MM', style="error")
+        print('use format YYYY-MM', style="error")
         exit()
     elif args.year_month[4] != '-':
-        console.print('use format YYYY-MM', style="error")
+        print('use format YYYY-MM', style="error")
         exit()
     func_dict[args.function](args.year_month)
 
