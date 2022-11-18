@@ -14,20 +14,20 @@ def sell(product_name, sell_price):
     format_sell_price = "{:.2f}".format(sell_price)
     inventory_list = read_csv_to_dict('inventory.csv')
     if inventory_list == []:
-        console.print("ERROR: No items in stock", style='error')
+            print("ERROR: No items in stock", style='error')
         return
     product_list = []
     for item in inventory_list:
         if item['product_name'] == product_name:
             product_list.append(item)
     if product_list == []:
-        console.print("ERROR: Item not in stock", style='error')
+            print("ERROR: Item not in stock", style='error')
     elif len(product_list) == 1:
         exp_date_string = product_list[0]['expiration_date']
         exp_date_object = datetime.strptime(
             exp_date_string, '%Y-%m-%d').date()
         if exp_date_object < get_date_as_string(False):
-            console.print(
+                print(
                 "ERROR: Product is expired and tossed in the bin",
                 style='error')
             write_csv('inventory.csv', product_list[0]['id'])
@@ -37,7 +37,7 @@ def sell(product_name, sell_price):
                          get_date_as_string(True)]
             append_csv('sold.csv', sell_list)
             write_csv('inventory.csv', sell_list[0])
-            console.print('Sold {} for €{}'.format(
+                print('Sold {} for €{}'.format(
                 product_name, format_sell_price))
     elif len(product_list) > 1:
         product_list_sorted = sorted(
@@ -46,7 +46,7 @@ def sell(product_name, sell_price):
         exp_date_object = datetime.strptime(
             exp_date_string, '%Y-%m-%d').date()
         if exp_date_object < get_date_as_string(False):
-            console.print(
+                print(
                 "ERROR: Product is expired and tossed in the bin",
                 style='error')
             write_csv('inventory.csv', product_list[0]['id'])
@@ -56,5 +56,5 @@ def sell(product_name, sell_price):
                          get_date_as_string(True)]
             append_csv('sold.csv', sell_list)
             write_csv('inventory.csv', sell_list[0])
-            console.print('Sold {} for €{}'.format(
+                print('Sold {} for €{}'.format(
                 product_name, format_sell_price), style='success')
