@@ -15,5 +15,5 @@ def buy(product_name, buy_price, exp_date):
     buy_list = [id, product_name, buy_date, format_buy_price, exp_date]
     append_csv('bought.csv', buy_list)
     append_csv('inventory.csv', buy_list)
-    console.print("Bought {} for €{} with expiration date: {}".format(
+    print("Bought {} for €{} with expiration date: {}".format(
         product_name, format_buy_price, exp_date), style='success')
