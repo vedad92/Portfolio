@@ -13,7 +13,7 @@ def reset_date():
         date_now = today.strftime('%Y-%m-%d')
         f.write(date_now)
         f.close()
-        console.print(f"Date set to: {date_now}", style='success')
+        print(f"Date set to: {date_now}", style='success')
 
 
 def advance_time(days):
@@ -27,7 +27,7 @@ def advance_time(days):
     with open('datenow.txt', 'w') as f:
         f.write(new_date_string)
         f.close
-        console.print(f"Date set to: {new_time}", style='success')
+        print(f"Date set to: {new_time}", style='success')
 
 
 def get_date_as_string(boolean):
@@ -39,7 +39,7 @@ def get_date_as_string(boolean):
         elif boolean is True:
             return time_string
         else:
-            console.print('ERROR: expect input True or False', style='error')
+            print('ERROR: expect input True or False', style='error')
 
 
 def change_date(date):
@@ -47,4 +47,4 @@ def change_date(date):
         f.write(date)
         f.close
         date_set = datetime.strptime(date, '%Y-%m-%d').date()
-        console.print('Date set to {}'.format(date_set), style='success')
+        print('Date set to {}'.format(date_set), style='success')
