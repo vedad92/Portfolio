@@ -1,16 +1,6 @@
 from helpers import get_countries
 
-""" Leave this untouched. Wincpy uses it to match this assignment with the tests it runs. """
-__winc_id__ = "c545bc87620d4ced81cbddb8a90b4a51"
-__human_name__ = "for"
-
-
 countries = get_countries()
-
-""" Write your functions here. """
-
-
-### Je moet hier nog een functie van maken
 
 def takeSecond(elem):
     return elem[1]
