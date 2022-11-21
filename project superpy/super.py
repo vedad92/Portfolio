@@ -1,4 +1,3 @@
-# Imports
 import argparse
 from date_function import reset_date, advance_time, change_date
 from buy import buy
@@ -12,30 +11,6 @@ from rich.theme import Theme
 
 custom_theme = Theme({'success': 'green', 'error': 'bold red'})
 console = Console(theme=custom_theme)
-
-
-# Do not change these lines.
-__winc_id__ = "a2bc36ea784242e4989deb157d527ba0"
-__human_name__ = "superpy"
-
-
-# gevonden op stackoverflow om spatie van een lege metavar weg te halen
-class SingleMetavarHelpFormatter(argparse.HelpFormatter):
-    def _format_action_invocation(self, action):
-        if not action.option_strings:
-            metavar, = self._metavar_formatter(action, action.dest)(1)
-            return metavar
-        else:
-            parts = []
-            if action.nargs == 0:
-                parts.extend(action.option_strings)
-            else:
-                default = action.dest.upper()
-                args_string = self._format_args(action, default)
-                parts.extend(action.option_strings)
-                parts[-1] += ' %s' % args_string
-            return ', '.join(parts)
-
 
 # dictonairy van functions zoals in de les uitgelegd
 func_dict = {
